@@ -59,6 +59,12 @@ table {
 *{
     box-sizing: border-box;
     padding: 2%;
+    max-width: 100%;
+}
+
+
+header, section{
+    padding: 4% 0;
 }
 
 html{
@@ -68,7 +74,7 @@ html{
 }
 
 body{
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: white;
     font-family: "Bebas Neue";
     /* background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3701a75b-9748-465e-b71a-4c1371bbb465/d4doj23-4f1bdccc-be71-49fa-b97d-4cd58395e19f.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzM3MDFhNzViLTk3NDgtNDY1ZS1iNzFhLTRjMTM3MWJiYjQ2NVwvZDRkb2oyMy00ZjFiZGNjYy1iZTcxLTQ5ZmEtYjk3ZC00Y2Q1ODM5NWUxOWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.-WhJ22cn3b0kbOzpWzn216BbIxfcU8W7wHp9J3nkClY");
@@ -77,6 +83,16 @@ body{
     background-color: black;
     text-decoration: none;
     
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 2rem;
+    font-family: "Bebas Neue";
+    letter-spacing: 1%;
 }
 
 
@@ -88,30 +104,35 @@ body{
     flex-direction: row;
 } */
 
-ul{
+.links{
     padding: 2%;
     display: flex;
     justify-content: space-between;
+    font-size: 2rem;
 }
 
 
 
 
 .top_section{
-    display: flex;
-    justify-content: center;
-}
-
-.image_button{
     background-image: url("https://picsum.photos/600/400");
     /* the 600 & 400 are the w * h for the img we are inserting */
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 0 auto;
+    text-align: center;
+}
+
+.image_button{
+    
     color: white;
     font-size: large;
     font-family: "Bebas Neue", cursive;
-    width: 600px;
-    height: 400px;
+    
 }
 
 
@@ -121,8 +142,13 @@ ul{
 .row{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 20px;
+}
+
+.row div{
+    width: 30%;
+    margin: 2% 0;
 }
 
 .portfolio{
@@ -159,6 +185,8 @@ footer{
     justify-content: center;
     text-align: center;
 }
+
+
 
 footer button a{
     color: white;
@@ -206,3 +234,47 @@ footer button a:hover{
     height: 10vh;
 } */
 
+@media(max-width: 800px){
+
+}
+
+@media(max-width: 500px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .links button{
+        width: 40%;
+        margin: 1%;
+    }
+
+    .top_section{
+        width: 80%;
+        margin: 0% auto;
+    }
+
+    .row div{
+        width: 40%;
+    }
+
+    footer{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    }
+
+    footer button{
+        margin-bottom: 19.5%;
+    }
+}
